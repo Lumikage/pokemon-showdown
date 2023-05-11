@@ -8,6 +8,31 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
 		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
 	},
+	revitalize: {
+		name: "Revitalize",
+		desc: "When this Pokemon is hit by a move that makes contact, all Pokemon in the party are cured of their non-volatile status conditions.",
+		shortDesc: "Cures party of status conditions when hit by a contact move.",
+	},
+	rumination: {
+		name: "Rumination",
+		desc: "On the Pokemon's first turn in battle, if it uses a Special move, the power of that attack is multiplied by 1.5.",
+		shortDesc: "On the Pokemon's first turn in battle, its Special attacks have 1.5x power."
+	},
+	shellshock: {
+		name: "Shellshock",
+		desc: "The power of this Pokemon's move is multiplied by 1.3 if it is the last to move in a turn. Does not affect Doom Desire and Future Sight.",
+		shortDesc: "This Pokemon's attacks have 1.3x power if it is the last to move in a turn.",
+	},
+	sonorous: {
+		name: "Sonorous",
+		desc: "This Pokemon's sound-based moves have their power multiplied by 1.3. This Pokemon takes halved damage from sound-based moves.",
+		shortDesc: "This Pokemon receives 1/2 damage from sound moves. Its own have 1.3x power.",
+},
+	earthenclamp: {
+		name: "Earthen Clamp",
+		desc: "On switch-in, this Pokemon summons Gravity, which remains in effect until this Ability is no longer active for any Pokemon.",
+		shortDesc: "On switch-in, Gravity begins, which lasts until this Pokemon is not active in battle.",
+	},
 	aerilate: {
 		name: "Aerilate",
 		desc: "This Pokemon's Normal-type moves become Flying-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",

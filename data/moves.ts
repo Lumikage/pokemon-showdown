@@ -33,6 +33,176 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Grass",
 		contestType: "Clever",
 	},
+	slimeball: {
+		num: 4000,
+		accuracy: 100,
+		basePower: 65,
+		category: "Special",
+		name: "Slime Ball",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			boosts: {
+				spe: -1,
+			},
+		},
+		target: "normal",
+		type: "Poison",
+	},
+	sparkleshock: {
+		num: 4001,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Sparkle Shock",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	pyrestinger: {
+		num: 4002,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Pyre Stinger",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Fire",
+	},
+	chargingbash: {
+		num: 4003,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Charging Bash",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 100,
+			self: {
+				boosts: {
+					spd: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Electric",
+	},
+	falseswoop: {
+		num: 4004,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "False Swoop",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		volatileStatus: 'taunt',
+		condition: {
+			duration: 2,
+			onStart(target) {
+				if (target.activeTurns && !this.queue.willMove(target)) {
+					this.effectState.duration++;
+				}
+				this.add('-start', target, 'move: Taunt');
+			},
+			onResidualOrder: 15,
+			onEnd(target) {
+				this.add('-end', target, 'move: Taunt');
+			},
+			onDisableMove(pokemon) {
+				for (const moveSlot of pokemon.moveSlots) {
+					const move = this.dex.moves.get(moveSlot.id);
+					if (move.category === 'Status' && move.id !== 'mefirst') {
+						pokemon.disableMove(moveSlot.id);
+					}
+				}
+			},
+			onBeforeMovePriority: 5,
+			onBeforeMove(attacker, defender, move) {
+				if (!move.isZ && !move.isMax && move.category === 'Status' && move.id !== 'mefirst') {
+					this.add('cant', attacker, 'move: Taunt', move);
+					return false;
+				}
+			},
+		},
+		self: {
+			boosts: {
+				spe: +1,
+			},
+		},
+		target: "normal",
+		type: "Flying",
+	},
+	impactdive: {
+		num: 4005,
+		accuracy: 90,
+		basePower: 75,
+		category: "Physical",
+		name: "Impact Dive",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, gravity: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Flying",
+	},
+	breakrush: {
+		num: 4006,
+		accuracy: 100,
+		basePower: 120,
+		category: "Physical",
+		name: "Break Rush",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				def: -1,
+				spd: -1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ice",
+	},
+	soulburn: {
+		num: 4007,
+		accuracy: 90,
+		basePower: 130,
+		category: "Special",
+		name: "Soulburn",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
 	accelerock: {
 		num: 709,
 		accuracy: 100,

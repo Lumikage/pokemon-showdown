@@ -21,6 +21,46 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "The user recovers 1/2 the HP lost by the target, rounded down. If this move breaks the target's substitute, the user does not recover any HP.",
 		},
 	},
+	slimeball: {
+		name: "Slime Ball",
+		desc: "Has a 100% chance to lower the target's Speed by 1 stage.",
+		shortDesc: "100% chance to lower the target's Speed by 1.",
+	},
+	sparkleshock: {
+		name: "Sparkle Shock",
+		desc: "Has a 20% chance to confuse the target.",
+		shortDesc: "20% chance to confuse the target.",
+	},
+	pyrestinger: {
+		name: "Pyre Stinger",
+		desc: "Hits twice, with each hit having a 10% chance to burn the target. If the first hit breaks the target's substitute, it will take damage for the second hit.",
+		shortDesc: "Hits 2 times. Each hit has 10% chance to burn.",
+	},
+	chargingbash: {
+		name: "Charging Bash",
+		desc: "Has a 100% chance to raise the user's Special Defense by 1 stage.",
+		shortDesc: "100% chance to raise the user's Sp. Def by 1.",
+	},
+	falseswoop: {
+		name: "False Swoop",
+		desc: "Prevents the target from using non-damaging moves for its next two turns. Raises the user's Speed by 1 stage.",
+		shortDesc: "Taunts target for 2 turns. Raises the user's Speed by 1.",
+	},
+	impactdive: {
+		name: "Impact Dive",
+		desc: "Has a 30% chance to make the target flinch.",
+		shortDesc: "30% chance to make the target flinch.",
+	},
+	breakrush: {
+		name: "Break Rush",
+		desc: "Lowers the user's Defense and Special Defense by 1 stage.",
+		shortDesc: "Lowers the user's Defense and Sp. Def by 1.",
+	},
+	soulburn: {
+		name: "Soulburn",
+		desc: "Lowers the user's Special Attack by 2 stages.",
+		shortDesc: "Lowers the user's Sp. Atk by 2.",
+	},
 	accelerock: {
 		name: "Accelerock",
 		desc: "No additional effect.",

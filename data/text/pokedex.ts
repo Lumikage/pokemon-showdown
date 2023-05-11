@@ -8,6 +8,129 @@ export const PokedexText: {[k: string]: PokedexText} = {
 	venusaur: {
 		name: "Venusaur",
 	},
+	twigler: {
+		name: "Twigler",
+	},
+	stagrove: {
+		name: "Stagrove",
+	},
+	gallantler: {
+		name: "Gallantler",
+	},
+	pyrull: {
+		name: "Pyrull",
+	},
+	blazox: {
+		name: "Blazox",
+	},
+	zenferno: {
+		name: "Zenferno",
+	},
+	snailimp: {
+		name: "Snailimp",
+	},
+	wallusk: {
+		name: "Wallusk",
+	},
+	conchampion: {
+		name: "Conchampion",
+	},
+	lialynx: {
+		name: "Lialynx",
+	},
+	lyncarix: {
+		name: "Lyncarix",
+	},
+	excavalynx: {
+		name: "Excavalynx",
+	},
+	lyncounce: {
+		name: "Lyncounce",
+	},
+	winkit: {
+		name: "Winkit",
+	},
+	tawnimer: {
+		name: "Tawnimer",
+	},
+	amureile: {
+		name: "Amureile",
+	},
+	impedraile: {
+		name: "Impedraile",
+	},
+	raptarix: {
+		name: "Raptarix",
+	},
+	gustigrave: {
+		name: "Gustigrave",
+	},
+	airesquall: {
+		name: "Airesquall",
+	},
+	zephyrath: {
+		name: "Zephyrath",
+	},
+	larvant: {
+		name: "Larvant",
+	},
+	chrysigna: {
+		name: "Chrysigna",
+	},
+	pyromite: {
+		name: "Pyromite",
+	},
+	hopivo: {
+		name: "Hopivo",
+	},
+	lapinorde: {
+		name: "Lapinorde",
+	},
+	agulas: {
+		name: "Agulas",
+	},
+	aquellas: {
+		name: "Aquellas",
+	},
+	arsalugas: {
+		name: "Arsalugas",
+	},
+	argnovus: {
+		name: "Argonovus",
+	},
+	wrigglite: {
+		name: "Wrigglite",
+	},
+	squirmlurm: {
+		name: "Squirmlurm",
+	},
+	entogoon: {
+		name: "Entogoon",
+	},
+	glenron: {
+		name: "Glenron",
+	},
+	tritank: {
+		name: "Tritank",
+	},
+	rapdreiven: {
+		name: "Rapdreiven",
+	},
+	skiddoalfar: {
+		name: "Skiddo-Alfar",
+	},
+	gogoatalfar: {
+		name: "Gogoat-Alfar",
+	},
+	woolooalfar: {
+		name: "Wooloo-Alfar",
+	},
+	dubwoolalfar: {
+		name: "Dubwool-Alfar",
+	},
+	chatotalfar: {
+		name: "Chatot-Alfar",
+	},
 	venusaurmega: {
 		name: "Venusaur-Mega",
 	},

@@ -78,6 +78,95 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 106,
 	},
+	revitalize: {
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+			this.add('-activate', target, 'ability: Revitalize');
+			let success = false;
+			const allies = [...target.side.pokemon, ...target.side.allySide?.pokemon || []];
+			for (const ally of allies) {
+				if (ally.cureStatus()) success = true;
+			}
+			return success;
+		}
+		},
+		name: "Revitalize",
+		rating: 3.5,
+		num: 2001,
+	},
+	rumination: {
+		onModifySpAPriority: 5,
+		onModifySpA(spa, pokemon) {
+   				if (pokemon.activeMoveActions === 1) {
+					this.add('-activate', pokemon, 'ability: Rumination');
+        				this.debug('Rumination boost');
+        				return this.chainModify([5325, 4096]);
+    			}
+		},
+		name: "Rumination",
+		rating: 3.5,
+		num: 2000,
+	},
+	shellshock: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon) {
+			let boosted = true;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (this.queue.willMove(target)) {
+					boosted = false;
+					break;
+				}
+			}
+			if (boosted) {
+				this.debug('Shellshock boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Shellshock",
+		rating: 2.5,
+		num: 2003,
+	},
+	sonorous: {
+		onBasePowerPriority: 7,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['sound']) {
+				this.debug('Sonorous boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.flags['sound']) {
+				this.debug('Sonorous weaken');
+				return this.chainModify(0.5);
+			}
+		},
+		isBreakable: true,
+		name: "Sonorous",
+		rating: 3.5,
+		num: 2005,
+	},
+	earthenclamp: {
+		onStart(pokemon) {
+			this.add('-activate', pokemon, 'ability: Earthen Clamp');
+			this.field.addPseudoWeather('gravity');
+			this.field.pseudoWeather['gravity'].duration = 0;
+		},
+		onEnd(pokemon) {
+			if (this.field.pseudoWeather['gravity'].source !== pokemon) return;
+			for (const target of this.getAllActive()) {
+				if (target === pokemon) continue;
+				if (target.hasAbility('earthenclamp')) {
+					this.field.pseudoWeather['gravity'].source = target;
+					return;
+				}
+			}
+			this.field.removePseudoWeather('gravity');
+		},
+		name: "Earthen Clamp",
+		rating: 4,
+		num: 2004,
+	},
 	airlock: {
 		onSwitchIn(pokemon) {
 			this.effectState.switchingIn = true;
@@ -1613,7 +1702,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([5461, 4096]);
 			}
 		},
-		isPermanent: true,
 		name: "Hadron Engine",
 		rating: 4.5,
 		num: 289,
@@ -2772,7 +2860,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return this.chainModify([5461, 4096]);
 			}
 		},
-		isPermanent: true,
 		name: "Orichalcum Pulse",
 		rating: 4.5,
 		num: 288,
