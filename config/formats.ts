@@ -346,7 +346,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Limited Two Restricted', 'Z-Move Clause'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Limit Two Restricted', 'Z-Move Clause'],
 		banlist: ['ND AG', 'Arena Trap', 'Assist', 'Baton Pass', 'Moody', 'Shadow Tag', 'Pursuit', 'Hidden Power', 'Last Respects', 'Shed Tail', 'Mewtwo', 'Ho-oh', 'Lugia', 'Kyogre', 'Groudon', 'Rayquaza', 'Deoxys', 'Dialga', 'Palkia', 'Regigigas', 'Giratina', 'Darkrai', 'Arceus', 'Reshiram', 'Zekrom', 'Kyurem', 'Genesect', 'Xerneas', 'Yveltal', 'Zygarde', 'Tapu Koko', 'Tapu Lele', 'Tapu Bulu', 'Tapu Fini', 'Cosmog', 'Cosmoem', 'Solgaleo', 'Lunala', 'Necrozma', 'Magearna', 'Marshadow', 'Melmetal', 'Pheromosa', 'Poipole', 'Naganadel', 'Zacian', 'Zamazenta', 'Eternatus', 'Spectrier', 'Calyrex', 'Wo-Chien', 'Chien-Pao', 'Ting-Lu', 'Chi-Yu', 'Koraidon', 'Miraidon'],
 		restricted: ['Enamorus', 'Enamorus-Therian', 'Landorus-Therian', 'Landorus', 'Shaymin-Sky', 'Regieleki', 'Urshifu', 'Urshifu-Rapid-Strike', 'Blissey', 'Chansey', 'Corviknight', 'Cinderace', 'Dragapult', 'Palafin', 'Palafin-Hero', 'Espathra', 'Ferrothorn', 'Garchomp', 'Garganacl', 'Gholdengo', 'Greninja', 'Heatran', 'Kartana', 'Maushold', 'Rillaboom', 'Toxapex', 'Volcarona'],
 	},
@@ -359,7 +359,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Limited Two Restricted', 'Z-Move Clause'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause', 'Limit Two Restricted', 'Z-Move Clause'],
 		banlist: ['ND AG', 'Arena Trap', 'Assist', 'Baton Pass', 'Moody', 'Shadow Tag', 'Pursuit', 'Hidden Power', 'Last Respects', 'Shed Tail'],
 		restricted: ['Enamorus', 'Enamorus-Therian', 'Landorus-Therian', 'Landorus', 'Shaymin-Sky', 'Regieleki', 'Urshifu', 'Urshifu-Rapid-Strike', 'Blissey', 'Chansey', 'Corviknight', 'Cinderace', 'Dragapult', 'Palafin', 'Palafin-Hero', 'Espathra', 'Ferrothorn', 'Garchomp', 'Garganacl', 'Gholdengo', 'Greninja', 'Heatran', 'Kartana', 'Maushold', 'Rillaboom', 'Toxapex', 'Volcarona'],
 	},
