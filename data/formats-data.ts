@@ -479,7 +479,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	growlithehisui: {
 		isNonstandard: "Unobtainable",
 		tier: "Unreleased",
-		natDexTier: "NFE",
+		natDexTier: "LC",
 	},
 	arcanine: {
 		tier: "RU",
@@ -797,7 +797,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	voltorbhisui: {
 		isNonstandard: "Unobtainable",
 		tier: "Unreleased",
-		natDexTier: "NFE",
+		natDexTier: "LC",
 	},
 	electrode: {
 		tier: "(PU)",
@@ -6357,7 +6357,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	tawnimer: {
-		tier: "NU",
+		tier: "RU",
 		doublesTier: "DOU",
 	},
 	amureile: {
@@ -6393,7 +6393,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	pyromite: {
-		tier: "NU",
+		tier: "RU",
 		doublesTier: "DOU",
 	},
 	hopivo: {
@@ -6413,7 +6413,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	argonovus: {
-		tier: "NU",
+		tier: "RU",
 		doublesTier: "DOU",
 	},
 	wrigglite: {
@@ -6453,7 +6453,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	dubwoolalfar: {
-		tier: "NU",
+		tier: "RU",
 		doublesTier: "DOU",
 	},
 	chatotalfar: {
